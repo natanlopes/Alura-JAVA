@@ -1,3 +1,4 @@
+package br.com.alura.screenmatch;
 import java.util.Scanner;
 
 public class Desafio {

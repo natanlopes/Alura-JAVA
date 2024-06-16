@@ -1,4 +1,4 @@
-package br.com.alura.scrennmacth.modelos;
+package br.com.alura.screnmacht.calculos;
 
 public interface Classificavel {
 

@@ -1,9 +1,18 @@
 package br.com.alura.scrennmacth.modelos;
 
-public class Episodio {
+import br.com.alura.screnmacht.calculos.Classificavel;
+
+public class Episodio implements Classificavel {
     private int numero;
     private String nome;
-    public int getNumero() {
+    private int totalVisualizacao;
+    public int getTotalVisualizacao() {
+		return totalVisualizacao;
+	}
+	public void setTotalVisualizacao(int totalVisualizacao) {
+		this.totalVisualizacao = totalVisualizacao;
+	}
+	public int getNumero() {
 		return numero;
 	}
 	public void setNumero(int numero) {
@@ -22,6 +31,16 @@ public class Episodio {
 		this.serie = serie;
 	}
 	private Serie serie;
+	@Override
+	public int getClassificacao() {
+		// TODO Auto-generated method stub
+		if (totalVisualizacao > 100) {
+			return 4;
+		}else {
+			return 2;
+		}
+		
+	}
 }
 
    

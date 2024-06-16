@@ -1,4 +1,7 @@
+package br.com.alura.screenmatch;
 import br.com.alura.screnmacht.calculos.CalculadoraDeTempo;
+import br.com.alura.screnmacht.calculos.FiltroRecomendacao;
+import br.com.alura.scrennmacth.modelos.Episodio;
 import br.com.alura.scrennmacth.modelos.Filme;
 import br.com.alura.scrennmacth.modelos.Serie;
 
@@ -7,6 +10,7 @@ public class Principal {
         Filme meuFilme = new Filme();
         Serie minhaSerie = new Serie();
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
         meuFilme.setNome("O poderoso chefão");
         meuFilme.setAnoDeLancamento(1970);
         meuFilme.setDuracaoEmMinutos(180);
@@ -35,7 +39,13 @@ public class Principal {
      calculadora.inclui(minhaSerie);
      System.out.println(calculadora.getTempoTotal());
      
-
+     filtro.filtra(meuFilme);
+     
+     Episodio episodio = new Episodio();
+     episodio.setNumero(1);
+     episodio.setSerie(minhaSerie);
+     episodio.setTotalVisualizacao(300);
+     filtro.filtra(episodio);
      
     }
 }

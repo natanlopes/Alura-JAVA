@@ -1,5 +1,7 @@
 package br.com.alura.scrennmacth.modelos;
 
+import br.com.alura.screnmacht.calculos.Classificavel;
+
 public class Filme extends Titulo implements Classificavel{
 	private String diretor;
 
@@ -14,8 +16,9 @@ public class Filme extends Titulo implements Classificavel{
 	@Override
 	public int getClassificacao() {
 		// TODO Auto-generated method stub
-		return 0;
+		return (int) obterMedia() / 2;
 	}
+
 	
 	
 	
