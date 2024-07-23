@@ -1,6 +1,11 @@
 package br.com.alura.scrennmacth.modelos;
 
 public class Serie extends Titulo{
+	public Serie(String nome, int anoDeLancamento) {
+		super(nome, anoDeLancamento);
+		// TODO Auto-generated constructor stub
+	}
+
 	private int temporadas;
     private boolean ativa;
     private int episodiosPorTemporada;
